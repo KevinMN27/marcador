@@ -10,6 +10,7 @@
             const { data, error } = await supabase
                 .from('Partidos')
                 .select('equipo_local_id, equipo_visitante_id');
+				console.log(partido);
 
             if (error) {
                 console.error('Error fetching data:', error);
@@ -19,7 +20,7 @@
 
             if (data.length > 0) {
                 const partido = data[0]; 
-				console.loh(partido);
+				
                 equipos = `Equipo ${partido.equipo_local_id} vs Equipo ${partido.equipo_visitante_id}`;
             } else {
                 equipos = "No hay partidos disponibles";
