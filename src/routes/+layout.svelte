@@ -8,11 +8,6 @@
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
 	import { AppBar } from '@skeletonlabs/skeleton';
 	import '@fortawesome/fontawesome-free/css/all.min.css';
-
-	//Imports De Skeleton
-	import { Autocomplete } from '@skeletonlabs/skeleton';
-	import { AutocompleteOption } from '@skeletonlabs/skeleton';
-
 </script>
 
 <AppBar gridColumns="grid-cols-3" slotDefault="place-self-center" slotTrail="place-content-end">
