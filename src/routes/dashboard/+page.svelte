@@ -14,16 +14,18 @@
 			try {
 				let { data, error } = await supabase
 					.from('Partidos')
-					.select('equipo_local_id, equipo_visitante_id');
+					.select('id, fecha, lugar, equipo_local_id, equipo_visitante_id, puntos_local, puntos_visitante');
 				
-				teams = data;
-					
+					teams = data;
+					console.log(teams);
+
 					let { data: data_equipos, error: error_local } = await supabase
 						.from('Equipos')
 						.select('id,nombre')
 									
 					data.forEach(match => {
 						const names = [];
+						
 
 						const equipoLocal = data_equipos.find(equipo => equipo.id === match.equipo_local_id);
 						if (equipoLocal) names.push(equipoLocal.nombre);
@@ -49,26 +51,33 @@
 	
 </script>
 
-<section class="h-screen flex flex-col justify-center items-center bg-surface">
+<section class="h-screen flex flex-row justify-center items-center bg-surface">
 	<!-- Tarjeta -->
-	{#each matchs as match}
-		<div class="flex flex-row m-4">
+	{#each matchs as match, index}
+		<div class=" card card-hover flex flex-row m-4 ">
 			<div class="max-w-sm rounded overflow-hidden shadow-lg">
-				<div class="px-6 py-4">
-					<div id="equipo" class="font-bold text-xl mb-2">
+				<div class="px-6 py-4  text-center">
+					<div id="equipo" class="font-bold text-xl mb-4">
 						{match[0]} vs {match[1]}
 					</div>
-
-					<p class="text-white-700 text-base">
-						No tengo idea de como mostrar los datos del fetch aca >:(
+					<!-- Mostrar los puntos de cada equipo -->
+					<p class="text-white-700 text-xl">
+						{teams[index].puntos_local} - {teams[index].puntos_visitante}
 					</p>
 
-					<div class="px-6 pt-4 pb-2">
-						<span
-							class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-							>Ver detalles</span
-						>
+					<div class="flex flex-row justify-between">
+						<p class="text-white-700 text-m mt-4">
+							{teams[index].fecha}  
+						</p>
+	
+						<p class="text-white-700 text-m mt-4">
+							{teams[index].lugar}
+						</p>
 					</div>
+
+						
+
+					
 				</div>
 			</div>
 		</div>

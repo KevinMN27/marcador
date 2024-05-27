@@ -89,7 +89,7 @@
 					<div class="mt-12">
 						<button
 							type="button"
-							href="/dashboard"
+							href="/routes/dashboard"
 							class="w-full shadow-xl py-2.5 px-4 text-sm font-semibold rounded-full text-white bg-primary-700 hover:bg-primary-500 focus:outline-none"
 						>
 							Iniciar sesion
