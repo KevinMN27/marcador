@@ -9,8 +9,6 @@
     
     const modalStore = getModalStore();
 
-    
-    
     onMount(() => {
         async function loadEquipoData() {
             
@@ -20,10 +18,7 @@
                     .select('*')
                     .eq('jugador_id', IdJugador);
                     stats = data[0];
-                    console.log(stats.puntos)
-                    console.log(stats.tiros_libres_anotados)
-                    console.log(stats.tiros_libres_fallados)
-                    console.log(stats.faltas)
+                    
                     
                 console.log(stats);
             } catch (error) {
@@ -35,7 +30,7 @@
                     .from('Jugadores')
                     .select('*')
                     .eq('id', IdJugador);
-                    player = data;
+                    player = data[0];
                 console.log(player);
                 
             }
@@ -46,21 +41,29 @@
         loadEquipoData();
     });
 
-    
-
-    /*
-    NOMBRE DEL JUGADOR, DORSAL, POSICION, PUNTOS, FALTAS, TIROS ANOTADOS, TIROS FALLADOS 
-    */
-
 </script>
-<div>
+<div class="bg-black rounded-lg p-3">
     <form>
         <div class="mb-12">
-            <h3 class="text-3xl font-extrabold">Estadisticas del jugador</h3>
+            <h3 class="text-3xl font-extrabold mb-5">Estadisticas del jugador</h3>
+            <h4 class="ml-2">Nombre</h4>
+            <input class="input placeholder-white w-22 mt-2 mb-4" type="text" placeholder="{player.nombre}" disabled>
+
+            <div class="flex items-center mt-3">
+                <div class="flex items-center space-x-2 mr-10">
+                    <h4 class="ml-2">Dorsal</h4>
+                    <input class="input placeholder-white w-20" type="text" placeholder="{player.dorsal}" disabled>
+                </div>
+                <div class="flex items-center space-x-2 ">
+                    <h4>Posicion</h4>
+                    <input class="input placeholder-white w-20" type="text" placeholder="{player.posicion}" disabled>
+                </div>
+            </div>
+            
         </div>
-        <div class="table-container">
+        <div class="table-container ">
             <!-- Native Table Element -->
-            <table class="table table-hover">
+            <table class="table table-hover w-fit m-4">
                 <thead>
                     <tr>
                         <th>Puntos <br>anotados</th>
@@ -69,25 +72,15 @@
                         <th>Faltas</th>
                     </tr>
                 </thead>
-                <tbody>
-                    
+                <tbody>    
                         <tr>
                             <td>{stats.puntos}</td>
                             <td>{stats.tiros_libres_anotados}</td>
                             <td>{stats.tiros_libres_fallados}</td>
                             <td>{stats.faltas}</td>
-                        </tr>
-                    
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <th colspan="3">Calculated Total Weight</th>
-                        
-                    </tr>
-                </tfoot>
+                        </tr>     
+                </tbody> 
             </table>
         </div>
     </form>
-    
-    
 </div>

@@ -17,6 +17,8 @@
 	let nombreVisitante = "";
 	let jugadoresLocales = [];
 	let jugadoresVisitantes = [];
+	let nombresJugadoresLocales = [];
+	let nombresJugadoresVisitantes = [];
 	
 	
 	let valorPartido = Number(partidoID);
@@ -125,8 +127,8 @@
 					.from('Jugadores')
 					.select('nombre')
 					.in('id', jugadoresLocales);
-					jugadoresLocales = data[0];
-					console.log(data);
+					nombresJugadoresLocales = data;
+					console.log(nombresJugadoresLocales);
 			}
 			catch(error){
 				console.error("Error fetching data:", error);
@@ -137,15 +139,18 @@
 					.from('Jugadores')
 					.select('nombre')
 					.in('id', jugadoresVisitantes);
-					jugadoresVisitantes = data[0];
-					console.log(data);
+					nombresJugadoresVisitantes = data;
+					console.log(nombresJugadoresVisitantes);
 			}
 			catch(error){
 				console.error("Error fetching data:", error);
 			}
+
+			
 			
 		}
 		loadEquipoData();
+		
 	});
 	
 	
@@ -164,6 +169,19 @@
 		modalStore.trigger(modal);
 	}
 
+	let jugadoresLocalesCombinados = jugadoresLocales.map((id, index) => ({
+    id: id,
+    nombre: nombresJugadoresLocales[index]
+  		}));
+  	let jugadoresVisitantesCombinados = jugadoresVisitantes.map((id, index) => ({
+    id: id,
+    nombre: nombresJugadoresVisitantes[index]
+		}));
+		
+		console.log(jugadoresLocalesCombinados);
+		console.log(jugadoresVisitantesCombinados);
+            
+        
 	function HandleSelectValue(){
 		const SelectedValue = event.target.value;
 		ModalComponent(SelectedValue);
@@ -176,19 +194,18 @@
     
 </section>
 <section class="datos h-screen">
-	<div class="grid grid-cols-3 justify-center items-center">
-		<div class="h-full m-4">
-			<h2 class=" items-center h2">{nombreLocal}</h2>
+	<div class="grid grid-cols-2 justify-center items-center">
+		<div class="h-full bg-primary-700 m-4 rounded-xl">
+			<h2 class="h2 flex flex-row justify-center">{nombreLocal}</h2>
 			<!---
 				Nombre del equipo, puntos,
 			-->
 			<div class="max-w-sm rounded overflow-hidden">
-				<div class="px-15 py-15 w-20 bg-primary-700 text-l">
-					ASDASD
+				<div class="px-15 py-15 w-20  text-xl">
+					JUGADORES
 				</div>
 			</div>
 			<select id="local" class="select" on:change={HandleSelectValue}>
-				
 				<option value="1">Option 1</option>
 				<option value="2">Option 2</option>
 				<option value="3">Option 3</option>
@@ -197,13 +214,13 @@
 			</select>
 		</div>
 
-		<hr class="h-screen border-none border-left">
+		
 
-		<div class="h-full bg-secondary-600 m-4">
-			<h2 class="h2">{nombreVisitante}</h2>
+		<div class="h-full bg-secondary-600 m-4 rounded-xl">
+			<h2 class="h2 flex flex-row justify-center">{nombreVisitante}</h2>
 			<div class="max-w-sm rounded overflow-hidden shadow-lg">
-				<div class=" px-15 py-15">
-					ASDADA
+				<div class=" px-15 py-15 text-xl">
+					JUGADORES
 				</div>
 			</div>
 
