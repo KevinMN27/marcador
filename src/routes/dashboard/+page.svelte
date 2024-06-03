@@ -14,7 +14,7 @@
 			try {
 				let { data, error } = await supabase
 					.from('Partidos')
-					.select('id, fecha, lugar, equipo_local_id, equipo_visitante_id, puntos_local, puntos_visitante');
+					.select('*');
 				
 					teams = data;
 					console.log(teams);
@@ -54,7 +54,9 @@
 <section class="h-screen flex flex-row justify-center items-center bg-surface">
 	<!-- Tarjeta -->
 	{#each matchs as match, index}
+	<a href="/dashboard/{index+1}">
 		<div class=" card card-hover flex flex-row m-4 ">
+			
 			<div class="max-w-sm rounded overflow-hidden shadow-lg">
 				<div class="px-6 py-4  text-center">
 					<div id="equipo" class="font-bold text-xl mb-4">
@@ -81,5 +83,7 @@
 				</div>
 			</div>
 		</div>
+	</a>
+		
 	{/each}
 </section>
