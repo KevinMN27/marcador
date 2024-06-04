@@ -1,4 +1,4 @@
-<div class="max-w-4xl mx-auto font-[sans-serif] text-[#333] p-6">
+<div class="max-w-4xl mx-auto font-[sans-serif] text-white p-6">
 	<div class="text-center mb-16">
 		<a href="javascript:void(0)"
 			><img src="https://seeklogo.com/images/H/hecho-en-mexico-logo-F086CFC8CD-seeklogo.com.png" alt="logo" class="w-52 inline-block" />

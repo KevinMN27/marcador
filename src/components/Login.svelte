@@ -1,4 +1,4 @@
-<div class="font-[sans-serif] text-[#333]">
+<div class="font-[sans-serif] text-white">
 	<div class="min-h-screen flex flex-col items-center justify-center">
 		<div class="grid md:grid-cols-2 items-center gap-4 max-w-6xl w-full p-4 m-4 rounded-md">
 			<div class="md:max-w-md w-full sm:px-6 py-4">

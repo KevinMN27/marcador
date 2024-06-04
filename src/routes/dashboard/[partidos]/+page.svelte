@@ -186,54 +186,107 @@
 <section class="datos h-screen">
 	<div class="grid grid-cols-2 justify-center items-center">
 		<div class="h-full bg-primary-700 m-4 rounded-xl">
-			<div class="grid grid-cols-2 mt-3 w-full">
-				
-				<div class="text-right ml-50">
-					<h2 class="w-1/2">{nombreLocal}</h2>
+
+			<div class="flex flex-row items-center justify-between mt-1 w-full mb-10">	
+				<div class="flex items-center justify-between">
+					<h2 class="h2 m-2 font-bold">{nombreLocal}</h2>
 				</div>
-				<div class="">
-					<h2 class="w-auto text-right">{teams.puntos_local}</h2>
+				<div class="flex items-end m-5 text-3xl font-bold">
+					{teams.puntos_local}
 				</div>
-				
-			
 			</div>
+
+			<div class="flex flex-row mb-10">
+				<div class="flex text-2xl ml-2 mr-2 font-bold">
+					Faltas:
+				</div>
+				<div class="flex text-2xl p-0.5 rounded-xl border border-white">
+					20
+				</div>
+			</div>
+
+			<div class="flex flex-row mb-10">
+				<div class="flex text-2xl ml-2 mr-2 font-bold">
+					Posesion de balon:
+				</div>
+				<div class="flex text-2xl  p-0.5 rounded-xl border border-white">
+					20
+				</div>
+			</div>
+
+			
 			<!---
 				Nombre del equipo, puntos,
 			-->
-			<div class="max-w-sm rounded overflow-hidden">
-				<div class="px-15 py-15 w-20  text-xl">
-					JUGADORES
-				</div>
+			
+				
+			<h3 class="h3 w-full font-bold">JUGADORES</h3>
+				
+			
+			<hr class="mt-5 mb-5"/>
+			<div class="ml-1 mr-1">
+				<select id="local" class="select" on:change={HandleSelectValue}>
+					<option value="1">Option 1</option>
+					<option value="2">Option 2</option>
+					<option value="3">Option 3</option>
+					<option value="4">Option 4</option>
+					<option value="5">Option 5</option>
+				</select>
 			</div>
-			<select id="local" class="select" on:change={HandleSelectValue}>
-				<option value="1">Option 1</option>
-				<option value="2">Option 2</option>
-				<option value="3">Option 3</option>
-				<option value="4">Option 4</option>
-				<option value="5">Option 5</option>
-			</select>
+			
 		</div>
 
 		
 
-		<div class="h-full bg-secondary-600 m-4 rounded-xl">
-			<div class="flex items-center w-full">
-				<h2 class="w-auto text-right">{teams.puntos_visitante}</h2>
-				<div class="w-1/2 text-left">{nombreVisitante}</div>
+		<div class="h-full bg-secondary-700 m-4 rounded-xl">
+
+			<div class="flex flex-row items-center justify-between mt-1 w-full mb-10">	
+				<div class="flex items-start m-5 text-3xl font-bold">
+					{teams.puntos_visitante}
+				</div>
+				<div class="flex items-center justify-between">
+					<h2 class="h2 m-2 font-bold">{nombreVisitante}</h2>
+				</div>
+				
 			</div>
-			<div class="max-w-sm rounded overflow-hidden shadow-lg">
-				<div class=" px-15 py-15 text-xl">
-					JUGADORES
+
+			<div class="flex flex-row mb-10">
+				<div class="flex text-2xl ml-2 mr-2 font-bold">
+					Faltas:
+				</div>
+				<div class="flex text-2xl p-0.5 rounded-xl border border-white">
+					20
 				</div>
 			</div>
 
-			<select id="visitante" class="select" on:change={HandleSelectValue}>
-				<option value="1">Option 1</option>
-				<option value="2">Option 2</option>
-				<option value="3">Option 3</option>
-				<option value="4">Option 4</option>
-				<option value="5">Option 5</option>
-			</select>
+			<div class="flex flex-row mb-10">
+				<div class="flex text-2xl ml-2 mr-2 font-bold">
+					Posesion de balon:
+				</div>
+				<div class="flex text-2xl  p-0.5 rounded-xl border border-white">
+					20
+				</div>
+			</div>
+
+			<hr class="bg-white"/>
+			<!---
+				Nombre del equipo, puntos,
+			-->
+			<div class="max-w-sm rounded overflow-hidden mt-10">
+				<div class="flex flex-row px-15 py-15 text-2xl mb-3 ml-2 font-bold items-center justify-center w-full">
+						<h3 class="h3 flex flex-row">JUGADORES</h3>
+				</div>
+			</div>
+			<div class="ml-1 mr-1">
+				<select id="local" class="select" on:change={HandleSelectValue}>
+					<option value="1">Option 1</option>
+					<option value="2">Option 2</option>
+					<option value="3">Option 3</option>
+					<option value="4">Option 4</option>
+					<option value="5">Option 5</option>
+				</select>
+			</div>
+			
 		</div>
 
 		
