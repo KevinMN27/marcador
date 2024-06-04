@@ -200,7 +200,7 @@
 				<div class="flex text-2xl ml-2 mr-2 font-bold">
 					Faltas:
 				</div>
-				<div class="flex text-2xl p-0.5 rounded-xl border border-white">
+				<div class="flex text-2xl p-1 rounded-xl border border-white">
 					20
 				</div>
 			</div>
@@ -209,7 +209,7 @@
 				<div class="flex text-2xl ml-2 mr-2 font-bold">
 					Posesion de balon:
 				</div>
-				<div class="flex text-2xl  p-0.5 rounded-xl border border-white">
+				<div class="flex text-2xl  p-1 rounded-xl border border-white">
 					20
 				</div>
 			</div>
@@ -228,11 +228,11 @@
 			<hr class="mt-5 mb-5"/>
 			<div class="ml-1 mr-1">
 				<select id="local" class="select" on:change={HandleSelectValue}>
-					<option value="1">Option 1</option>
-					<option value="2">Option 2</option>
-					<option value="3">Option 3</option>
-					<option value="4">Option 4</option>
-					<option value="5">Option 5</option>
+					<option value="1">Jugador 1</option>
+					<option value="2">Jugador 2</option>
+					<option value="3">Jugador 3</option>
+					<option value="4">Jugador 4</option>
+					<option value="5">Jugador 5</option>
 				</select>
 			</div>
 			
@@ -256,7 +256,7 @@
 				<div class="flex text-2xl ml-2 mr-2 font-bold">
 					Faltas:
 				</div>
-				<div class="flex text-2xl p-0.5 rounded-xl border border-white">
+				<div class="flex text-2xl p-1 rounded-xl border border-white">
 					20
 				</div>
 			</div>
@@ -265,12 +265,12 @@
 				<div class="flex text-2xl ml-2 mr-2 font-bold">
 					Posesion de balon:
 				</div>
-				<div class="flex text-2xl p-2 rounded-lg border border-white">
+				<div class="flex text-2xl p-1 rounded-lg border border-white">
 					20
 				</div>
 			</div>
 
-			<hr class="border-white"/>
+			
 			<!---
 				Nombre del equipo, puntos,
 			-->
@@ -278,13 +278,15 @@
 				<h3 class="h3 font-bold">JUGADORES</h3>
 			</div>
 
+			<hr class="mt-5 mb-5"/>
+
 			<div class="ml-1 mr-1">
 				<select id="local" class="select" on:change={HandleSelectValue}>
-					<option value="1">Option 1</option>
-					<option value="2">Option 2</option>
-					<option value="3">Option 3</option>
-					<option value="4">Option 4</option>
-					<option value="5">Option 5</option>
+					<option value="1">Jugador 1</option>
+					<option value="2">Jugador 2</option>
+					<option value="3">Jugador 4</option>
+					<option value="4">Jugador 4</option>
+					<option value="5">Jugador 5</option>
 				</select>
 			</div>
 			
