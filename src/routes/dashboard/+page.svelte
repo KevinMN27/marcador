@@ -51,7 +51,7 @@
 	
 </script>
 
-<section class="h-screen flex flex-row justify-center items-center bg-surface">
+<section class="h-full grid grid-cols-3 justify-center items-center bg-surface w-full">
 	<!-- Tarjeta -->
 	{#each matchs as match, index}
 	<a href="/dashboard/{index+1}">

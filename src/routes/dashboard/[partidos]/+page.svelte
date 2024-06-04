@@ -219,8 +219,10 @@
 				Nombre del equipo, puntos,
 			-->
 			
-				
-			<h3 class="h3 w-full font-bold">JUGADORES</h3>
+			<div class="text-center w-full">
+				<h3 class="h3 font-bold">JUGADORES</h3>
+			</div>
+			
 				
 			
 			<hr class="mt-5 mb-5"/>
@@ -263,20 +265,19 @@
 				<div class="flex text-2xl ml-2 mr-2 font-bold">
 					Posesion de balon:
 				</div>
-				<div class="flex text-2xl  p-0.5 rounded-xl border border-white">
+				<div class="flex text-2xl p-2 rounded-lg border border-white">
 					20
 				</div>
 			</div>
 
-			<hr class="bg-white"/>
+			<hr class="border-white"/>
 			<!---
 				Nombre del equipo, puntos,
 			-->
-			<div class="max-w-sm rounded overflow-hidden mt-10">
-				<div class="flex flex-row px-15 py-15 text-2xl mb-3 ml-2 font-bold items-center justify-center w-full">
-						<h3 class="h3 flex flex-row">JUGADORES</h3>
-				</div>
+			<div class="text-center w-full">
+				<h3 class="h3 font-bold">JUGADORES</h3>
 			</div>
+
 			<div class="ml-1 mr-1">
 				<select id="local" class="select" on:change={HandleSelectValue}>
 					<option value="1">Option 1</option>
@@ -288,10 +289,6 @@
 			</div>
 			
 		</div>
-
-		
-		
-	
 	</div>
 
 </section>

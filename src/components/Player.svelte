@@ -42,7 +42,7 @@
     });
 
 </script>
-<div class="bg-black rounded-lg p-3">
+<div class="bg-surface-900 rounded-lg p-6">
     <form>
         <div class="mb-12">
             <h3 class="text-3xl font-extrabold mb-5">Estadisticas del jugador</h3>
