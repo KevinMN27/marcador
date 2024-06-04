@@ -1,6 +1,8 @@
 <script>
     import { AppBar } from '@skeletonlabs/skeleton';
     import logo from '$lib/logo.jpeg';
+	import close from '$lib/close.png';
+	import partidos from '$lib/partidos.png';
 </script>
 <AppBar gridColumns="grid-cols-3" slotDefault="place-self-center" slotTrail="place-content-end">
 	<svelte:fragment slot="lead">
@@ -8,8 +10,12 @@
     </svelte:fragment>
 	<svelte:fragment slot="trail">
 		<div class="flex flex-row">
-			<p class="mr-2">Hola</p>
-			<h2>buenas noches</h2>
+			<a href=" /dashboard">
+				<img src={partidos} class="w-10" alt="partidos"/>	
+			</a>
+			<a href=" /">
+				<img src={close} class="w-10 ml-5" alt="close"/>
+			</a>
 		</div>
 	</svelte:fragment>
 </AppBar>

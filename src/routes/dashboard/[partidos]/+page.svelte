@@ -73,7 +73,7 @@
 			try{
 				let { data, error } = await supabase
 					.from('Partidos')
-					.select('equipo_local_id, equipo_visitante_id')
+					.select('equipo_local_id, equipo_visitante_id, puntos_local, puntos_visitante')
 					.eq('id', partidoID);
 					teams = data[0];
 					console.log(teams);
@@ -169,17 +169,7 @@
 		modalStore.trigger(modal);
 	}
 
-	let jugadoresLocalesCombinados = jugadoresLocales.map((id, index) => ({
-    id: id,
-    nombre: nombresJugadoresLocales[index]
-  		}));
-  	let jugadoresVisitantesCombinados = jugadoresVisitantes.map((id, index) => ({
-    id: id,
-    nombre: nombresJugadoresVisitantes[index]
-		}));
-		
-		console.log(jugadoresLocalesCombinados);
-		console.log(jugadoresVisitantesCombinados);
+	
             
         
 	function HandleSelectValue(){
@@ -196,7 +186,17 @@
 <section class="datos h-screen">
 	<div class="grid grid-cols-2 justify-center items-center">
 		<div class="h-full bg-primary-700 m-4 rounded-xl">
-			<h2 class="h2 flex flex-row justify-center">{nombreLocal}</h2>
+			<div class="grid grid-cols-2 mt-3 w-full">
+				
+				<div class="text-right ml-50">
+					<h2 class="w-1/2">{nombreLocal}</h2>
+				</div>
+				<div class="">
+					<h2 class="w-auto text-right">{teams.puntos_local}</h2>
+				</div>
+				
+			
+			</div>
 			<!---
 				Nombre del equipo, puntos,
 			-->
@@ -217,7 +217,10 @@
 		
 
 		<div class="h-full bg-secondary-600 m-4 rounded-xl">
-			<h2 class="h2 flex flex-row justify-center">{nombreVisitante}</h2>
+			<div class="flex items-center w-full">
+				<h2 class="w-auto text-right">{teams.puntos_visitante}</h2>
+				<div class="w-1/2 text-left">{nombreVisitante}</div>
+			</div>
 			<div class="max-w-sm rounded overflow-hidden shadow-lg">
 				<div class=" px-15 py-15 text-xl">
 					JUGADORES

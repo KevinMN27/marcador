@@ -3,26 +3,22 @@
 		<div class="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
 			<nav class="flex flex-wrap justify-center -mx-5 -my-2">
 				<div class="px-5 py-2">
-					<a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900"> About </a>
+					<a href="https://www.uas.edu.mx/" class="text-base leading-6 text-gray-500 hover:text-gray-900"> Sobre nosotros </a>
 				</div>
 				<div class="px-5 py-2">
-					<a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900"> Blog </a>
+					<a href="https://www.uas.edu.mx/" class="text-base leading-6 text-gray-500 hover:text-gray-900"> Blog </a>
 				</div>
 				<div class="px-5 py-2">
-					<a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900"> Team </a>
+					<a href="https://www.uas.edu.mx/" class="text-base leading-6 text-gray-500 hover:text-gray-900"> Equipo </a>
 				</div>
+				
 				<div class="px-5 py-2">
-					<a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900"> Pricing </a>
+					<a href="https://www.uas.edu.mx/" class="text-base leading-6 text-gray-500 hover:text-gray-900"> Contacto </a>
 				</div>
-				<div class="px-5 py-2">
-					<a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900"> Contact </a>
-				</div>
-				<div class="px-5 py-2">
-					<a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900"> Terms </a>
-				</div>
+				
 			</nav>
 			<div class="flex justify-center mt-8 space-x-6">
-				<a href="ola" class="text-gray-400 hover:text-gray-500">
+				<a href="https://www.uas.edu.mx/" class="text-gray-400 hover:text-gray-500">
 					<span class="sr-only">Facebook</span>
 					<svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
 						<path
@@ -32,7 +28,7 @@
 						></path>
 					</svg>
 				</a>
-				<a href="ola" class="text-gray-400 hover:text-gray-500">
+				<a href="https://www.uas.edu.mx/" class="text-gray-400 hover:text-gray-500">
 					<span class="sr-only">Instagram</span>
 					<svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
 						<path
@@ -42,7 +38,7 @@
 						></path>
 					</svg>
 				</a>
-				<a href="ola" class="text-gray-400 hover:text-gray-500">
+				<a href="https://www.uas.edu.mx/" class="text-gray-400 hover:text-gray-500">
 					<span class="sr-only">Twitter</span>
 					<svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
 						<path
@@ -50,7 +46,7 @@
 						></path>
 					</svg>
 				</a>
-				<a href="ola" class="text-gray-400 hover:text-gray-500">
+				<a href="https://www.uas.edu.mx/" class="text-gray-400 hover:text-gray-500">
 					<span class="sr-only">GitHub</span>
 					<svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
 						<path
@@ -60,7 +56,7 @@
 						></path>
 					</svg>
 				</a>
-				<a href="ola" class="text-gray-400 hover:text-gray-500">
+				<a href="https://www.uas.edu.mx/" class="text-gray-400 hover:text-gray-500">
 					<span class="sr-only">Dribbble</span>
 					<svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
 						<path
@@ -72,7 +68,7 @@
 				</a>
 			</div>
 			<p class="mt-8 text-base leading-6 text-center text-gray-400">
-				© 2021 SomeCompany, Inc. All rights reserved.
+				© Sursum Versus 2024
 			</p>
 		</div>
 	</section>
